@@ -1,0 +1,288 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+a:hover{
+    border-bottom:#ff4c0c solid 5px;  
+    transition:0.5s ease-in-out;
+}
+
+button{
+    font-weight: 500;
+    margin-left:45px;
+    height:69px;;
+    width: 177px;
+    border:#ff4c0c solid 4px;
+    color: #fff;
+    font-size: large;
+    background-color: #000;
+    border-radius:2px;
+ }
+ 
+ 
+ button:hover{
+      color:#000;
+      background-color: #ff4c0c;
+      border:#ff4c0c solid 3px;
+      transition:0.5s ease-in;
+ }
+ 
+.hamburger div{
+    width: 30px;
+    height:3px;
+    background-color:#fff;
+    margin:5px;
+    transition: all 0.3s ease;
+}
+.aboutus h2{
+    border-bottom: #ff4c0c solid 5px;
+ }
+
+
+.general{
+    width: 100%;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    background: #000;
+}
+
+.general .card{
+    position: relative;
+}
+.general .card .face{
+    width: 280px;
+    height: 300px;
+    transition: 0.5s;
+}
+
+.general .card .face.face1 {
+    position: relative;
+    background:black;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(150px);
+
+}
+
+.general .card:hover .face.face1{
+    transform: translateY(0);
+    filter: grayscale(100%)
+}
+
+.general .card .face.face1 .content{
+    transition: 0.5s;
+
+}
+
+.general .card:hover .face.face1 .content{
+    opacity: 1;
+
+}
+
+.general .card .face.face1 .content h3{
+    margin: 10px 0 0 ;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.general .card .face.face2{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transform: translateY(-150px);
+}
+
+.general .card:hover .face.face2{
+    transform: translateY(0);
+}
+
+.general .card .face.face2 .content p{
+    margin: 0;
+    padding: 20px;
+}
+
+.general .card .face.face2 .content a{
+        margin:15px 0 0 15px;
+        display: inline-block;
+        text-decoration: none;
+        font-weight: 900;
+        color: black;
+        padding: 5px;
+        border: 1px solid black;
+}
+
+.general .card .face.face2 .content a:hover{
+    background: #000;
+    color: #fff;
+}
+
+.content img{
+    height:100x;
+    width:100px;
+    padding-bottom: 20px;
+    margin:auto;
+    display:flex;
+    justify-content: center;
+}
+
+.general .card .face.face2.face3{
+    background:#ff4c0c;
+}
+.general .card .face.face2.face4{
+    background:#ff4c0c;
+}
+
+.accordion-button:not(.collapsed){
+    color:black;
+    Font-weight:bolder;
+    box-shadow:none;
+}
+
+ /*////////////////////////////////
+////////MEDIA QUERIES
+sm: 576px,
+md: 768px,
+lg: 992px,
+xl: 1200px,//////////////
+/////////////////////////////////*/
+@media (max-width:700px){
+    body{
+        overflow-x: hidden;
+    }
+
+    .nav-links{
+        position:absolute;
+        height:100vh;
+        top:8vh;
+        color:#000;
+        display: flex;
+        flex-direction: column;
+        background-color: #ff4c0c;
+        justify-content:center;
+        align-items:center;
+        width: 100%;
+        transform:translateX(100%);
+        transition:transform 0.5s ease-in;
+    }
+    .nav-links li{
+        opacity:0;
+    }
+    .nav-links a{
+        padding:60px;
+        color:black !important;
+        font-weight: bolder;
+        font-size:1.5em;
+    }
+    .hamburger{
+        cursor: pointer;
+    }
+    .nav-active{
+        transform: translateX(0%);
+    }
+    
+    @keyframes navLinkFade{
+        from{
+            opacity:0;
+            transform: translateX(50px);
+        }
+        to{
+            opacity:1;
+            transform:translateX(0px)
+        }
+    }
+
+    .toggle .line1{
+        transform:rotate(-45deg) translate(-5px,6px);
+        background-color: #000;
+    }
+    .toggle .line2{
+        opacity:0;
+    }
+    .toggle .line3{
+        transform:rotate(45deg) translate(-5px,-6px);
+        background-color: #000;
+    }
+ 
+
+
+    .general{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+    }
+    
+    .general .card .face.face1.interest {
+        position: relative;
+        background:black;
+        color:white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        transform: translateY(0px); 
+    }
+    .general .card .face.face1.interest:hover {
+        transform: translateY(0px); 
+    }
+
+    .general .card .face.face2.face3.interest-card {
+        position: relative;
+        background:#ff4c0c;
+        color:black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        transform: translateY(0px); 
+    }
+    .general .card .face.face2.face3.interest-card:hover {
+        transform: translateY(0px); 
+    }
+
+
+    .general .card .face.face1.goal {
+        position: relative;
+        background:black;
+        color:white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        transform: translateY(0px); 
+    }
+    .general .card .face.face2.face4.goal-card {
+        position: relative;
+        background:#ff4c0c;
+        color:black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        transform: translateY(0px); 
+    }
+    .general .card .face.face2.face3.interest-card:hover {
+        transform: translateY(0px); 
+    }
+
+}
+
+@media(min-width:700px){
+    .navbar .hamburger{
+        display:none;
+    }
+
+}
